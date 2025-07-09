@@ -358,6 +358,7 @@ doc_events = {
         "validate": "optic_store.doc_events.item.validate",
         "after_insert": "optic_store.doc_events.item.after_insert",
         "before_save": "optic_store.doc_events.item.before_save",
+        "before_insert": "optic_store.doc_events.item.custom_autoname_before_insert"
     },
     "Serial No": {
         "after_insert": "optic_store.doc_events.serial_no.after_insert",
