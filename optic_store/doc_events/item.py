@@ -50,6 +50,8 @@ def autoname(doc, method):
 
 
 def validate(doc, method):
+	if doc.item_code == '' or doc.item_code == None or not doc.item_code:
+		custom_autoname_before_insert(doc, method)
 	existing_item_name = frappe.db.exists(
 		"Item", {"item_name": doc.item_name, "name": ("!=", doc.name)}
 	)
